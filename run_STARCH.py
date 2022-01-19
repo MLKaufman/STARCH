@@ -16,7 +16,7 @@ parser.add_argument('-outdir','--outdir',required=False,type=str,default='.',hel
 parser.add_argument('-m','--gene_mapping_file_name',required=False,type=str,default='hgTables_hg19.txt',help='gene mapping file name') 
 args = parser.parse_args()
 
-nthreads = args.threads
+nthreads = int(args.threads)
 beta_spot = args.beta_spot
 n_clusters = args.n_clusters
 returnnormal = args.returnnormal
